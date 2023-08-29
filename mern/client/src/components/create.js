@@ -5,12 +5,10 @@ const Create = () => {
   const navigate = useNavigate();
   const emptyForm = { name: "", position: "", level: "" }
   const [form, setForm] = useState({ emptyForm });
- 
   // method to update the state properties
   const updateForm = (value) => setForm(
     (prev) => ({ ...prev, ...value})
   ); 
-
   // method to handle form submission
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +22,7 @@ const Create = () => {
     setForm({ emptyForm });
     navigate("/");
   } 
- // display the form that takes the input from the user
+  // display the form that takes the input from the user
   return (
     <div>
       <h3>Create New Record</h3>
